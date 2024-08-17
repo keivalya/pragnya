@@ -15,9 +15,15 @@ IPAddr = socket.gethostbyname(hostname)
 from itertools import cycle
 colors = cycle(["red", "blue", "green"])
 
+from dotenv import load_dotenv
+
+# Load environment variables from the .env file and Access the variables
+load_dotenv()
+my_ip_address = os.getenv('MY_IP_ADDRESS')
+
 # Define the server endpoint (IP address and port)
 # server_url = "opc.tcp://"+IPAddr+":4840"
-server_url = "opc.tcp://10.10.14.77:4840"
+server_url = "opc.tcp://"+my_ip_address+":4840"
 
 # Function to update the selected radio button
 def update_radio_button(value):
