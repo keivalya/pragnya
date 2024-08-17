@@ -182,7 +182,7 @@ class GUIApp:
         footer_font = CTkFont(family="Roboto", size=12, weight="bold")
         kv_image = CTkImage(dark_image=foot_image, size=(80, 50))
         self.image_refs.append(kv_image)  # Store reference
-        foot_label = CTkLabel(self.app, image=kv_image, text="developed by Keivalya Pandya (www.keivalya.com)", compound="left", font=footer_font)
+        foot_label = CTkLabel(self.app, image=kv_image, text=f"developed by Keivalya Pandya (www.keivalya.com) \n currently at {server_url}", compound="left", font=footer_font)
         foot_label.grid(row=12, column=0, padx=20, pady=5, sticky="ew", columnspan=2)
 
         self.app.after(500, self.toggle_blink)
