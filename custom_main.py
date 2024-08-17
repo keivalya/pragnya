@@ -15,9 +15,8 @@ IPAddr = socket.gethostbyname(hostname)
 from itertools import cycle
 colors = cycle(["red", "blue", "green"])
 
+import os
 from dotenv import load_dotenv
-
-# Load environment variables from the .env file and Access the variables
 load_dotenv()
 my_ip_address = os.getenv('MY_IP_ADDRESS')
 
